@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>HOME</title>
+</head>
+<body>
+
+<div class="gridster">
+<ul>
+<li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+	<header class="headerTransparent">HOME</header>
+	<div data-type="pagetab"
+		 data-device="st_alert"
+		 data-get-on='["off","[1-9]{1}|[0-9]{2}"]'
+		 data-url="index_home.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-home"
+		 data-icons='["fa-home","fa-home warn"]'
+		 class="big top-space">
+	</div>
+</li>
+
+<li class="halbTransparent" data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">Fenster</header>
+	<div class="top">
+		<div class="inline">
+			<div data-type="symbol"
+				 data-device="FK.Terrasse"
+			     	 data-get="state"
+				 data-get-on="open"
+				 data-get-off="closed"
+				 data-off-color="#3D4C66"
+				 data-on-color="firebrick"
+				 class="normal">
+			</div>
+			<div class="">Terrasse
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="symbol"
+				 data-device="FK.Wohnzimmer"
+			     	 data-get="state"
+				 data-get-on="open"
+				 data-get-off="closed"
+				 data-off-color="#3D4C66"
+				 data-on-color="firebrick"
+				 class="normal">
+			</div>
+			<div class="">Wohnzimmer
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="symbol"
+				 data-device="FK.Kueche"
+			     	 data-get="state"
+				 data-get-on="open"
+				 data-get-off="closed"
+				 data-off-color="#3D4C66"
+				 data-on-color="firebrick"
+				 class="normal">
+			</div>
+			<div class="">Kueche
+			</div>
+		</div>
+	</div>
+</li>
+<li class="halbTransparent border-left" data-row="2" data-col="2" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">INNENTEMPERATUR</header>	
+	<div class="top-space">
+		<div class="inline ">
+				<div data-type="label" 
+					 data-device="TM.Centrale_Climate"
+					 data-get="measured-temp"
+					 data-limits='[-20,18,40]' 
+					 data-colors='["cornflowerblue","green","firebrick"]' 
+					 data-unit="%B0C%0A" 
+					 class="big">
+				</div>
+				<div class="">Temperatur
+				</div>
+		</div>
+		<div class="inline left-space">
+				<div data-type="label" 
+					 data-device="TM.Centrale_Climate"
+					 data-get="humidity"
+					 data-limits='[0,40,71]' 
+					 data-colors='["cornflowerblue","green","firebrick"]' 
+					 data-unit="%" 
+					 class="big">
+				</div>
+				<div class=" ">Luftfeuchte
+				</div>
+		</div>
+	</div>
+</li>
+<li class="halbTransparent border-right border-left" data-row="1" data-col="4" data-sizex="3" data-sizey="2">
+	<header class="headerTransparent">AUßENTEMPERATUR</header>	
+	<div class="top-space">
+		<div class="inline" style="width:30%">
+			<div data-type="label" 
+				 data-device="Wetter_Pro"
+			     	 data-get="temperature"
+				 data-limits='[-20,18,40]' 
+				 data-colors='["cornflowerblue","green","firebrick"]' 
+				 data-unit="%B0C%0A" 
+				 class="big">
+			</div>
+			<div class="top-space">
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statTemperatureTendency"
+					 data-refperiod="1"
+					 class="inline large" >
+				</div>
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statTemperatureTendency"
+					 data-refperiod="2"
+					 class="inline large" >
+				</div>
+			</div>
+			<div class="top-space">Temperatur
+			</div>
+		</div>
+		<div class="inline" style="width:30%">
+				<div data-type="label" 
+					 data-device="Wetter_Pro"
+					 data-get="humidity"
+					 data-limits='[0,40,71]' 
+					 data-colors='["cornflowerblue","green","firebrick"]' 
+					 data-unit="%" 
+					 class="big">
+				</div>
+			<div class="top-space">
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statHumidityTendency"
+					 data-refperiod="1"
+					 class="inline large" >
+				</div>
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statHumidityTendency"
+					 data-refperiod="2"
+					 class="inline large" >
+				</div>
+			</div>
+				<div class="top-space">Luftfeuchte
+				</div>
+		</div>
+		<div class="inline" style="width:30%">
+				<div data-type="label" 
+					 data-device="Wetter_Pro"
+					 data-get="dewPoint"
+					 data-limits='[-73,18,28]' 
+					 data-colors='["cornflowerblue","green","firebrick"]'  
+					 data-unit="%B0C%0A" 
+					 class="big">
+				</div>
+			<div class="top-space">
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statDewPointTendency"
+					 data-refperiod="1"
+					 class="inline large" >
+				</div>
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statDewPointTendency"
+					 data-refperiod="2"
+					 class="inline large" >
+				</div>
+			</div>
+				<div class="top-space">Taupunkt
+				</div>
+		</div>
+	</div>
+</li>
+<li class="halbTransparent border-left border-right" data-row="1" data-col="6" data-sizex="1" data-sizey="2">
+	<header class="headerTransparent">Diesel</header>
+	<div class="centered">
+		<div class="inline ">
+				<div data-type="label" 
+					 data-device="Aral"
+					 data-get="Diesel"
+					 data-limits='[1.00,1.10,2.00]' 
+					 data-colors='["cornflowerblue","green","firebrick"]' 
+					 data-unit="€" 
+					 class="big">
+				</div>
+				<div class="">Aral
+				</div>
+		</div>
+		<div class="inline">
+				<div data-type="label" 
+					 data-device="Jet"
+					 data-get="Diesel"
+					 data-limits='[1.00,1.10,2.00]' 
+					 data-colors='["cornflowerblue","green","firebrick"]' 
+					 data-unit="€" 
+					 class="big">
+				</div>
+				<div class=" ">Jet
+				</div>
+		</div>
+		<div class="inline">
+				<div data-type="label" 
+					 data-device="Shell"
+					 data-get="Diesel"
+					 data-limits='[1.00,1.10,2.00]' 
+					 data-colors='["cornflowerblue","green","firebrick"]'  
+					 data-unit="€" 
+					 class="big">
+				</div>
+				<div class="">Shell
+				</div>
+		</div>
+	</div>
+</li>
+<li class="halbTransparent border-right" data-row="1" data-col="8" data-sizex="2" data-sizey="2">
+	<header class="headerTransparent">UHRZEIT / DATUM</header>
+	<div data-type="clock"
+		 data-format="H:i:s"
+		 data-interval="1000"
+		 class="orange big thin">
+	</div>
+	<div data-type="clock"
+		 data-format="D. d.m.Y"
+		 data-shortday-length="2"
+		 class="grey big">
+	</div>
+</li>
+
+<li class="halbTransparent border-left border-right" data-row="3" data-col="1" data-sizex="1" data-sizey="4">
+	<header class="headerTransparent">RÄUME</header>
+	<div class="centered">
+		<div data-type="pagetab"
+			 data-device="fl_alert"
+			 data-icon="ro-hanger"
+			 data-states='["off","on"]'
+			 data-url="flur.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["ro-hanger","ro-hanger warn"]'
+			 class="big">
+		</div>
+		<div data-type="pagetab"
+			 data-device="ku_alert"
+			 data-icon="fa-cutlery"
+			 data-states='["off","on"]'
+			 data-url="https://www.google.de/maps/dir/Hauert+11,+44227+Dortmund/Timo+Konietzka+Weg+10,+L%C3%BCnen/@51.5454896,7.4457074,12.5z/data=!4m8!4m7!1m5!1m1!1s0x47b918fe5f9baa9d:0x345aedcafc17d52c!2m2!1d7.40134!2d51.48967!1m0"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["fa-cutlery" ,"fa-cutlery warn"]'
+			 class="big">
+		</div>
+		<div data-type="pagetab"
+			 data-url="wetter.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icon="fa-cloud"
+			 class="big top-space">
+		</div>
+		<div data-type="pagetab"
+			 data-device="dr_ga_alert"
+			 data-icon="fa-battery-4"
+			 data-states='["off","on"]'
+			 data-url="batterie_status.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["fa-tree","fa-tree warn"]'
+			 class="big">
+		</div>
+	</div>
+</li>
+<li class="halbTransparent" data-row="3" data-col="2" data-sizex="5" data-sizey="2">
+	<header class="headerTransparent">HEIZUNG</header>
+	<div class="top">
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="TM.Centrale_Climate"
+				 data-get="desired-temp"
+				 data-get-on="15.0"
+				 data-get-off="^(?!15.0).*$"
+				 data-set="desired-temp"
+				 data-set-on="15.0"
+				 data-set-off=""
+				 data-icon="ma-brightness_3"
+				 data-background-icon="fa-circle-thin"
+				 data-on-color="cornflowerblue"
+				 data-off-color="#808080"
+				 data-on-background-color="#aa6900"
+				 data-off-background-color="#3D4C66"
+				 class="big">
+			</div>
+			<div class="">15°C
+			</div>
+		</div>
+		<div class="inline left-space-2 right-space-2">
+            <div data-type="spinner"
+                 data-device="TM.Centrale_Climate"
+				 data-get="desired-temp"
+				 data-set="desired-temp"
+                 data-icon-left-color="blue"
+                 data-icon-right-color="red"
+                 data-min="4.5"
+                 data-max="25.0"
+				 data-step="0.5"
+				 data-width="250"
+				 data-height="70"
+				 data-unit="°"
+				 data-longdelay="2500"
+				 data-background-color="rgba(61,76,102,0.5"
+                 class="valueonly"
+				 style="margin-bottom:6px;">
+            </div>
+			<div class="">Temperatur
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="TM.Centrale_Climate"
+				 data-get="desired-temp"
+				 data-get-on="21.0"
+				 data-get-off="^(?!21.0).*$"
+				 data-set="desired-temp"
+				 data-set-on="21"
+				 data-set-off=""
+				 data-icon="ro-sun"
+				 data-background-icon="fa-circle-thin"
+				 data-on-color="green"
+				 data-off-color="#808080"
+				 data-on-background-color="#aa6900"
+				 data-off-background-color="#3D4C66"
+				 class="big">
+			</div>
+			<div data-type="label"
+				 class="">21°C
+			</div>
+		</div>
+	</div>
+	<div class="inline left">
+		<div data-type="link"
+			 data-width="140"
+			 data-height="40"
+			 data-color="black"
+			 data-background-color="green"
+			 data-icon="fa-home"
+			 data-fhem-cmd="set TM.Centrale_Climate controlMode auto"
+			 class="round big">
+		</div>
+		<div data-type="label"
+			 class="">AUTO
+		</div>
+	</div>	
+	<div class="inline right">
+		<div data-type="link"
+			 data-width="140" 
+			 data-height="40"
+			 data-color="black"
+			 data-background-color="cornflowerblue"
+			 data-icon="ma-brightness_3"
+			 data-fhem-cmd="set TM.Centrale_Climate controlManu 15.0"
+			 class="inline-top round big">
+		</div>
+		<div data-type="label"
+			 class="">ECO
+		</div>
+	</div>	
+
+</li>
+<li class="halbTransparent border-right" data-row="3" data-col="7" data-sizex="2" data-sizey="2">
+	<header class="headerTransparent">PROGRAMME</header>
+	<div data-type="homestatus"
+		 data-device='rr_Roman'
+		 data-get-on='["home","asleep","absent","gone"]'
+		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
+		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
+		 data-width="180"
+		 data-height="180"
+		 data-fgcolor="cornflowerblue"
+		 data-tkcolor="#3D4C66"
+		 data-mincolor="black"
+		 data-maxcolor="#808080"
+		 class="right right-space">
+	</div>
+</li>
+<li class="halbTransparent border-left border-right" data-row="3" data-col="9" data-sizex="1" data-sizey="4">
+	<header class="headerTransparent">EXTRAS</header>
+	<div data-type="pagetab"
+		 data-url="regenradar.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="oa-weather_rain"
+		 class="big">
+	</div>
+	<div data-type="popup"
+		 data-device="s_AlarmStatus"
+		 data-get-on="arm"
+		 data-width="300px"
+		 data-height="525px">
+		<div data-type="symbol"
+			 data-device="s_AlarmStatus"
+			 data-states='["arm","disarm"]'
+			 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
+			 data-colors='["firebrick","#808080"]'
+			 data-background-icons='["fa-circle","none"]'
+			 data-background-colors='["cornflowerblue","none"]'
+			 class="big">
+		</div>
+		<div class="dialog dialogTransparent">
+			<header class="dialogheaderTransparent">ALARM-STATUS</header>
+			<div class="top-space">
+				<div class="">Alarm scharf schalten:
+				</div>
+				<div onclick="$('.dialog-close').trigger('click');"
+					 data-type="push"
+				     	 data-fhem-cmd="set s_AlarmArm arm"
+					 class="big">
+				</div>
+			</div>
+			<div class="top-space">
+				<div class="">Alarm unscharf schalten (PIN-Code)
+				</div>
+				<div>	
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="1"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline left big grey">1
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="2"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline big grey">2
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="3"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline right big grey">3
+				</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="4"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline left big grey">4
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="5"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline big grey">5
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="6"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline right big grey">6
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="7"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline left big grey">7
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="8"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline big grey">8
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="9"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline right big grey">9
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="0"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline middle big grey">0
+					</div>
+					<div onclick="$('.dialog-close').trigger('click');"
+						 data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="#"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline big grey">OK
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-type="pagetab"
+		 data-url="rpi_status.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-server"
+		 class="big">
+	</div>
+</li>
+<li class="halbTransparent border-left border-right" data-row="5" data-col="2" data-sizex="5" data-sizey="2">
+	<header class="headerTransparent">KALENDER</header>
+        <table class="" width="100%" style="font-size:100%">
+        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_001_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_001_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_001_etime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_001_summary" style="min-width:14em;"></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_002_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_002_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_002_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_002_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_003_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_003_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_003_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_003_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_004_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_004_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_004_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_004_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_005_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_005_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_005_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_005_summary" ></div></td>
+        </tr>
+		        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_006_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_006_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_006_etime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_006_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_007_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_007_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_007_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_007_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_008_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_008_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_008_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_008_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_009_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_009_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_009_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_009_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="CALVIEW_Dascha" data-get="t_010_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_010_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="CALVIEW_Dascha" data-get="t_010_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="CALVIEW_Dascha" data-get="t_010_summary" ></div></td>
+        </tr>
+    </table>
+</li>
+	
+<li class="halbTransparent border-left border-right" data-row="5" data-col="7" data-sizex="2" data-sizey="2">
+	<header class="headerTransparent">Fahrzeiten</header>	
+	<table class="calls" width="100%">
+		<tr class="darker">
+			<th>Ziel</th>
+			<th>Normal</th>
+			<th>Aktuell</th>
+		</tr>
+		<tr>
+			<td>
+				<div data-type="label" class="cell">Kostal:</div>
+			</td>
+			<td>
+				<div data-type="label" data-device="FahrzeitHomeWork" data-part="Normal:(.*).*Aktuell.*"></div>
+			</td>
+			<td>
+				<div data-type="label" data-device="FahrzeitHomeWork" data-part=".*Aktuell:(.*).*"></div>
+			</td>
+		</tr>
+	</table>
+</li>
+</ul>
+</div>
+</body>
+</html>
