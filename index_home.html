@@ -7,6 +7,8 @@
 
 <div class="gridster">
 <ul>
+<!--   HAUPTRAHMEN START -->
+
 <li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="2">
 	<header class="headerTransparent">HOME</header>
 	<div data-type="pagetab"
@@ -260,118 +262,6 @@
 		</div>
 	</div>
 </li>
-<li class="halbTransparent" data-row="3" data-col="2" data-sizex="5" data-sizey="2">
-	<header class="headerTransparent">HEIZUNG</header>
-	<div class="top">
-		<div class="inline">
-			<div data-type="switch"
-				 data-device="TM.Centrale_Climate"
-				 data-get="desired-temp"
-				 data-get-on="15.0"
-				 data-get-off="^(?!15.0).*$"
-				 data-set="desired-temp"
-				 data-set-on="15.0"
-				 data-set-off=""
-				 data-icon="ma-brightness_3"
-				 data-background-icon="fa-circle-thin"
-				 data-on-color="cornflowerblue"
-				 data-off-color="#808080"
-				 data-on-background-color="#aa6900"
-				 data-off-background-color="#3D4C66"
-				 class="big">
-			</div>
-			<div class="">15°C
-			</div>
-		</div>
-		<div class="inline left-space-2 right-space-2">
-            <div data-type="spinner"
-                 data-device="TM.Centrale_Climate"
-				 data-get="desired-temp"
-				 data-set="desired-temp"
-                 data-icon-left-color="blue"
-                 data-icon-right-color="red"
-                 data-min="4.5"
-                 data-max="25.0"
-				 data-step="0.5"
-				 data-width="250"
-				 data-height="70"
-				 data-unit="°"
-				 data-longdelay="2500"
-				 data-background-color="rgba(61,76,102,0.5"
-                 class="valueonly"
-				 style="margin-bottom:6px;">
-            </div>
-			<div class="">Temperatur
-			</div>
-		</div>
-		<div class="inline">
-			<div data-type="switch"
-				 data-device="TM.Centrale_Climate"
-				 data-get="desired-temp"
-				 data-get-on="21.0"
-				 data-get-off="^(?!21.0).*$"
-				 data-set="desired-temp"
-				 data-set-on="21"
-				 data-set-off=""
-				 data-icon="ro-sun"
-				 data-background-icon="fa-circle-thin"
-				 data-on-color="green"
-				 data-off-color="#808080"
-				 data-on-background-color="#aa6900"
-				 data-off-background-color="#3D4C66"
-				 class="big">
-			</div>
-			<div data-type="label"
-				 class="">21°C
-			</div>
-		</div>
-	</div>
-	<div class="inline left">
-		<div data-type="link"
-			 data-width="140"
-			 data-height="40"
-			 data-color="black"
-			 data-background-color="green"
-			 data-icon="fa-home"
-			 data-fhem-cmd="set TM.Centrale_Climate controlMode auto"
-			 class="round big">
-		</div>
-		<div data-type="label"
-			 class="">AUTO
-		</div>
-	</div>	
-	<div class="inline right">
-		<div data-type="link"
-			 data-width="140" 
-			 data-height="40"
-			 data-color="black"
-			 data-background-color="cornflowerblue"
-			 data-icon="ma-brightness_3"
-			 data-fhem-cmd="set TM.Centrale_Climate controlManu 15.0"
-			 class="inline-top round big">
-		</div>
-		<div data-type="label"
-			 class="">ECO
-		</div>
-	</div>	
-
-</li>
-<li class="halbTransparent border-right" data-row="3" data-col="7" data-sizex="2" data-sizey="2">
-	<header class="headerTransparent">PROGRAMME</header>
-	<div data-type="homestatus"
-		 data-device='rr_Roman'
-		 data-get-on='["home","asleep","absent","gone"]'
-		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
-		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
-		 data-width="180"
-		 data-height="180"
-		 data-fgcolor="cornflowerblue"
-		 data-tkcolor="#3D4C66"
-		 data-mincolor="black"
-		 data-maxcolor="#808080"
-		 class="right right-space">
-	</div>
-</li>
 <li class="halbTransparent border-left border-right" data-row="3" data-col="9" data-sizex="1" data-sizey="4">
 	<header class="headerTransparent">EXTRAS</header>
 	<div data-type="pagetab"
@@ -519,6 +409,122 @@
 		 data-off-color="#808080"
 		 data-icon="fa-server"
 		 class="big">
+	</div>
+</li>
+
+<!--   HAUPTRAHMEN ENDE -->
+
+
+<li class="halbTransparent" data-row="3" data-col="2" data-sizex="5" data-sizey="2">
+	<header class="headerTransparent">HEIZUNG</header>
+	<div class="top">
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="TM.Centrale_Climate"
+				 data-get="desired-temp"
+				 data-get-on="15.0"
+				 data-get-off="^(?!15.0).*$"
+				 data-set="desired-temp"
+				 data-set-on="15.0"
+				 data-set-off=""
+				 data-icon="ma-brightness_3"
+				 data-background-icon="fa-circle-thin"
+				 data-on-color="cornflowerblue"
+				 data-off-color="#808080"
+				 data-on-background-color="#aa6900"
+				 data-off-background-color="#3D4C66"
+				 class="big">
+			</div>
+			<div class="">15°C
+			</div>
+		</div>
+		<div class="inline left-space-2 right-space-2">
+            <div data-type="spinner"
+                 data-device="TM.Centrale_Climate"
+				 data-get="desired-temp"
+				 data-set="desired-temp"
+                 data-icon-left-color="blue"
+                 data-icon-right-color="red"
+                 data-min="4.5"
+                 data-max="25.0"
+				 data-step="0.5"
+				 data-width="250"
+				 data-height="70"
+				 data-unit="°"
+				 data-longdelay="2500"
+				 data-background-color="rgba(61,76,102,0.5"
+                 class="valueonly"
+				 style="margin-bottom:6px;">
+            </div>
+			<div class="">Temperatur
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="TM.Centrale_Climate"
+				 data-get="desired-temp"
+				 data-get-on="21.0"
+				 data-get-off="^(?!21.0).*$"
+				 data-set="desired-temp"
+				 data-set-on="21"
+				 data-set-off=""
+				 data-icon="ro-sun"
+				 data-background-icon="fa-circle-thin"
+				 data-on-color="green"
+				 data-off-color="#808080"
+				 data-on-background-color="#aa6900"
+				 data-off-background-color="#3D4C66"
+				 class="big">
+			</div>
+			<div data-type="label"
+				 class="">21°C
+			</div>
+		</div>
+	</div>
+	<div class="inline left">
+		<div data-type="link"
+			 data-width="140"
+			 data-height="40"
+			 data-color="black"
+			 data-background-color="green"
+			 data-icon="fa-home"
+			 data-fhem-cmd="set TM.Centrale_Climate controlMode auto"
+			 class="round big">
+		</div>
+		<div data-type="label"
+			 class="">AUTO
+		</div>
+	</div>	
+	<div class="inline right">
+		<div data-type="link"
+			 data-width="140" 
+			 data-height="40"
+			 data-color="black"
+			 data-background-color="cornflowerblue"
+			 data-icon="ma-brightness_3"
+			 data-fhem-cmd="set TM.Centrale_Climate controlManu 15.0"
+			 class="inline-top round big">
+		</div>
+		<div data-type="label"
+			 class="">ECO
+		</div>
+	</div>	
+
+</li>
+<li class="halbTransparent border-right" data-row="3" data-col="7" data-sizex="2" data-sizey="2">
+	<header class="headerTransparent">PROGRAMME</header>
+	<div data-type="homestatus"
+		 data-device='rr_Roman'
+		 data-get-on='["home","asleep","absent","gone"]'
+		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
+		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
+		 data-width="180"
+		 data-height="180"
+		 data-fgcolor="cornflowerblue"
+		 data-tkcolor="#3D4C66"
+		 data-mincolor="black"
+		 data-maxcolor="#808080"
+		 class="right right-space">
 	</div>
 </li>
 <li class="halbTransparent border-left border-right" data-row="5" data-col="2" data-sizex="5" data-sizey="2">
