@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>BATTERIE STATUS</title>
+        <title>HOME</title>
 </head>
 <body>
 
 <div class="gridster">
 <ul>
+<!--   HAUPTRAHMEN START -->
+
 <li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="2">
 	<header class="headerTransparent">HOME</header>
 	<div data-type="pagetab"
@@ -19,7 +21,7 @@
 		 data-off-color="#808080"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
-		 class="bigger top-space">
+		 class="big top-space">
 	</div>
 </li>
 
@@ -77,7 +79,7 @@
 					 data-limits='[-20,18,40]' 
 					 data-colors='["cornflowerblue","green","firebrick"]' 
 					 data-unit="%B0C%0A" 
-					 class="big">
+					 class="bigger">
 				</div>
 				<div class="">Temperatur
 				</div>
@@ -89,7 +91,7 @@
 					 data-limits='[0,40,71]' 
 					 data-colors='["cornflowerblue","green","firebrick"]' 
 					 data-unit="%" 
-					 class="big">
+					 class="bigger">
 				</div>
 				<div class=" ">Luftfeuchte
 				</div>
@@ -98,15 +100,15 @@
 </li>
 <li class="halbTransparent border-right border-left" data-row="1" data-col="4" data-sizex="3" data-sizey="2">
 	<header class="headerTransparent">AUßENTEMPERATUR</header>	
-	<div class="top-space">
-		<div class="inline" style="width:30%">
+	<div class="top-space-3x centered">
+		<div class="inline left" style="width:30%">
 			<div data-type="label" 
 				 data-device="Wetter_Pro"
 			     	 data-get="temperature"
 				 data-limits='[-20,18,40]' 
 				 data-colors='["cornflowerblue","green","firebrick"]' 
 				 data-unit="%B0C%0A" 
-				 class="big">
+				 class="bigger">
 			</div>
 			<div class="top-space">
 				<div data-type="klimatrend"
@@ -132,7 +134,7 @@
 					 data-limits='[0,40,71]' 
 					 data-colors='["cornflowerblue","green","firebrick"]' 
 					 data-unit="%" 
-					 class="big">
+					 class="bigger">
 				</div>
 			<div class="top-space">
 				<div data-type="klimatrend"
@@ -151,14 +153,14 @@
 				<div class="top-space">Luftfeuchte
 				</div>
 		</div>
-		<div class="inline" style="width:30%">
+		<div class="inline right" style="width:30%">
 				<div data-type="label" 
 					 data-device="Wetter_Pro"
 					 data-get="dewPoint"
 					 data-limits='[-73,18,28]' 
 					 data-colors='["cornflowerblue","green","firebrick"]'  
 					 data-unit="%B0C%0A" 
-					 class="big">
+					 class="bigger">
 				</div>
 			<div class="top-space">
 				<div data-type="klimatrend"
@@ -189,7 +191,7 @@
 					 data-limits='[1.00,1.10,2.00]' 
 					 data-colors='["cornflowerblue","green","firebrick"]' 
 					 data-unit="€" 
-					 class="big">
+					 class="bigger">
 				</div>
 				<div class="">Aral
 				</div>
@@ -201,7 +203,7 @@
 					 data-limits='[1.00,1.10,2.00]' 
 					 data-colors='["cornflowerblue","green","firebrick"]' 
 					 data-unit="€" 
-					 class="big">
+					 class="bigger">
 				</div>
 				<div class=" ">Jet
 				</div>
@@ -213,7 +215,7 @@
 					 data-limits='[1.00,1.10,2.00]' 
 					 data-colors='["cornflowerblue","green","firebrick"]'  
 					 data-unit="€" 
-					 class="big">
+					 class="bigger">
 				</div>
 				<div class="">Shell
 				</div>
@@ -222,15 +224,17 @@
 </li>
 <li class="halbTransparent border-right" data-row="1" data-col="8" data-sizex="2" data-sizey="2">
 	<header class="headerTransparent">UHRZEIT / DATUM</header>
-	<div data-type="clock"
-		 data-format="H:i:s"
-		 data-interval="1000"
-		 class="orange bigger thin">
-	</div>
-	<div data-type="clock"
-		 data-format="D. d.m.Y"
-		 data-shortday-length="2"
-		 class="grey big">
+	<div class="top-space-3x centered">
+		<div data-type="clock"
+			 data-format="H:i:s"
+			 data-interval="1000"
+			 class="orange tall thin">
+		</div>
+		<div data-type="clock"
+			 data-format="D. d.m.Y"
+			 data-shortday-length="2"
+			 class="grey bigger">
+		</div>
 	</div>
 </li>
 
@@ -238,37 +242,13 @@
 	<header class="headerTransparent">RÄUME</header>
 	<div class="centered">
 		<div data-type="pagetab"
-			 data-device="fl_alert"
-			 data-icon="ro-hanger"
-			 data-states='["off","on"]'
-			 data-url="flur.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["ro-hanger","ro-hanger warn"]'
-			 class="bigger">
-		</div>
-		<div data-type="pagetab"
-			 data-device="ku_alert"
-			 data-icon="fa-cutlery"
-			 data-states='["off","on"]'
-			 data-url="kuche.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["fa-cutlery" ,"fa-cutlery warn"]'
-			 class="bigger">
-		</div>
-		<div data-type="pagetab"
 			 data-url="wetter.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
 			 data-on-color="#808080"
 			 data-off-color="#808080"
 			 data-icon="fa-cloud"
-			 class="bigger top-space">
+			 class="big top-space">
 		</div>
 		<div data-type="pagetab"
 			 data-device="dr_ga_alert"
@@ -280,10 +260,164 @@
 			 data-on-color="#808080"
 			 data-off-color="#808080"
 			 data-icons='["fa-tree","fa-tree warn"]'
-			 class="bigger">
+			 class="big">
 		</div>
 	</div>
 </li>
+<li class="halbTransparent border-left border-right" data-row="3" data-col="9" data-sizex="1" data-sizey="4">
+	<header class="headerTransparent">EXTRAS</header>
+	<div data-type="pagetab"
+		 data-url="regenradar.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="oa-weather_rain"
+		 class="big">
+	</div>
+	<div data-type="popup"
+		 data-device="s_AlarmStatus"
+		 data-get-on="arm"
+		 data-width="255px"
+		 data-height="475px">
+		<div data-type="symbol"
+			 data-device="s_AlarmStatus"
+			 data-states='["arm","disarm"]'
+			 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
+			 data-colors='["firebrick","#808080"]'
+			 data-background-icons='["fa-circle","none"]'
+			 data-background-colors='["cornflowerblue","none"]'
+			 class="big">
+		</div>
+		<div class="dialog dialogTransparent">
+			<header class="dialogheaderTransparent">ALARM-STATUS</header>
+			<div class="top-space">
+				<div class="">Alarm scharf schalten:
+				</div>
+				<div onclick="$('.dialog-close').trigger('click');"
+					 data-type="push"
+				     	 data-fhem-cmd="set s_AlarmArm arm"
+					 class="big">
+				</div>
+			</div>
+			<div class="top-space">
+				<div class="">Alarm unscharf schalten (PIN-Code)
+				</div>
+				<div>	
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="1"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline left big grey">1
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="2"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline big grey">2
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="3"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline right big grey">3
+				</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="4"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline left big grey">4
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="5"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline big grey">5
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="6"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline right big grey">6
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="7"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline left big grey">7
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="8"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline big grey">8
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="9"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline right big grey">9
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="0"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline middle big grey">0
+					</div>
+					<div onclick="$('.dialog-close').trigger('click');"
+						 data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="#"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline big grey">OK
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-type="pagetab"
+		 data-url="rpi_status.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-server"
+		 class="big">
+	</div>
+</li>
+
+<!--   HAUPTRAHMEN ENDE -->
+
+<!--   ZUSATZRAHMEN START -->
+
 <li class="halbTransparent" data-row="3" data-col="2" data-sizex="7" data-sizey="4">
 	<header class="headerTransparent">REGENRADAR 1h</header>
 	<div class="cell">
@@ -298,159 +432,7 @@
 	</div>
 </li>
 
-<li class="halbTransparent border-left border-right" data-row="3" data-col="9" data-sizex="1" data-sizey="4">
-	<header class="headerTransparent">EXTRAS</header>
-	<div data-type="pagetab"
-		 data-url="regenradar.html"
-		 data-background-icon="fa-circle-thin"
-		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
-		 data-icon="oa-weather_rain"
-		 class="bigger">
-	</div>
-	<div data-type="popup"
-		 data-device="s_AlarmStatus"
-		 data-get-on="arm"
-		 data-width="350px"
-		 data-height="525px">
-		<div data-type="symbol"
-			 data-device="s_AlarmStatus"
-			 data-states='["arm","disarm"]'
-			 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
-			 data-colors='["firebrick","#808080"]'
-			 data-background-icons='["fa-circle","none"]'
-			 data-background-colors='["cornflowerblue","none"]'
-			 class="bigger">
-		</div>
-		<div class="dialog dialogTransparent">
-			<header class="dialogheaderTransparent">ALARM-STATUS</header>
-			<div class="top-space">
-				<div class="">Alarm scharf schalten:
-				</div>
-				<div onclick="$('.dialog-close').trigger('click');"
-					 data-type="push"
-				     	 data-fhem-cmd="set s_AlarmArm arm"
-					 class="bigger">
-				</div>
-			</div>
-			<div class="top-space">
-				<div class="">Alarm unscharf schalten (PIN-Code)
-				</div>
-				<div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="1"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">1
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="2"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">2
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="3"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">3
-					</div>
-				</div>
-				<div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="4"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">4
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="5"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">5
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="6"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">6
-					</div>
-				</div>
-				<div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="7"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">7
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="8"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">8
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="9"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">9
-					</div>
-				</div>
-				<div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="0"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">0
-					</div>
-					<div onclick="$('.dialog-close').trigger('click');"
-						 data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="#"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">OK
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div data-type="pagetab"
-		 data-url="rpi_status.html"
-		 data-background-icon="fa-circle-thin"
-		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
-		 data-icon="fa-server"
-		 class="bigger">
-	</div>
-</li>
-
-
-
-
+<!--   ZUSATZRAHMEN ENDE -->
 </ul>
 </div>
 </body>
