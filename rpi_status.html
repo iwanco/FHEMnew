@@ -452,7 +452,35 @@
 	<div class="big narrow orange">RPi-Status
 	</div>
 </li>
-
+<li class="halbTransparent border-left" data-row="4" data-col="4" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">TEMPERATUR</header>
+	<div class="top">
+		<div class="inline right-space">
+			<div class="">Aktuell:
+			</div>
+			<div data-type="label"
+				 data-device="rpi_sys"
+				 data-get="cpu_temp"
+				 data-unit="%B0C%0A"
+				 data-limits='[0,40]'
+				 data-colors='["green","firebrick"]'
+				 class="big top-space">
+			</div>
+		</div>
+		<div class="inline left-space">
+			<div class="">Durchschnitt:
+			</div>
+			<div data-type="label"
+				 data-device="rpi_sys"
+				 data-get="cpu_temp_avg"
+				 data-unit="%B0C%0A"
+				 data-limits='[0,40]'
+				 data-colors='["green","firebrick"]'
+				 class="big top-space">
+			</div>
+		</div>
+	</div>
+</li>
 <li class="halbTransparent border-left" data-row="3" data-col="2" data-sizex="6" data-sizey="1">
 	<header class="headerTransparent">RASPBERRY PI 2</header>
 	<div class="top">
@@ -541,35 +569,6 @@
 	</div>
 </li>
 
-<li class="halbTransparent border-left" data-row="5" data-col="4" data-sizex="2" data-sizey="1">
-	<header class="headerTransparent">TEMPERATUR</header>
-	<div class="top">
-		<div class="inline right-space">
-			<div class="">Aktuell:
-			</div>
-			<div data-type="label"
-				 data-device="rpi_sys"
-				 data-get="cpu_temp"
-				 data-unit="%B0C%0A"
-				 data-limits='[0,40]'
-				 data-colors='["green","firebrick"]'
-				 class="big top-space">
-			</div>
-		</div>
-		<div class="inline left-space">
-			<div class="">Durchschnitt:
-			</div>
-			<div data-type="label"
-				 data-device="rpi_sys"
-				 data-get="cpu_temp_avg"
-				 data-unit="%B0C%0A"
-				 data-limits='[0,40]'
-				 data-colors='["green","firebrick"]'
-				 class="big top-space">
-			</div>
-		</div>
-	</div>
-</li>
 
 <li class="halbTransparent border-left" data-row="7" data-col="6" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">AUSLASTUNG</header>
