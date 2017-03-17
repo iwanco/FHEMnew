@@ -278,7 +278,8 @@
 	<div data-type="popup"
 		 data-device="s_AlarmStatus"
 		 data-get-on="arm"
-		 data-width="255px"
+	         data-get-off="disarm"
+	      	 data-width="255px"
 		 data-height="475px">
 		<div data-type="symbol"
 			 data-device="s_AlarmStatus"
@@ -294,10 +295,9 @@
 			<div class="top-space">
 				<div class="">Alarm scharf schalten:
 				</div>
-				<div onclick="$('.dialog-close').trigger('click');"
-					 data-type="push"
-				     	 data-fhem-cmd="set s_AlarmArm arm"
-					 class="big">
+				<div data-type="push"
+				     data-fhem-cmd="set s_AlarmArm arm"
+				     class="big">
 				</div>
 			</div>
 			<div class="top-space">
@@ -385,10 +385,18 @@
 					<div data-type="push"
 						 data-icon=""
 						 data-device="dummy_keypad"
+						 data-set-on="#"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="inline left big grey">#
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
 						 data-set-on="0"
 						 data-off-color="#808080"
 						 data-off-background-color="#3D4C66"
-						 class="inline middle big grey">0
+						 class="inline big grey">0
 					</div>
 					<div onclick="$('.dialog-close').trigger('click');"
 						 data-type="push"
@@ -397,7 +405,7 @@
 						 data-set-on="#"
 						 data-off-color="#808080"
 						 data-off-background-color="#3D4C66"
-						 class="inline big grey">OK
+						 class="inline right big grey">OK
 					</div>
 				</div>
 			</div>
@@ -417,7 +425,6 @@
 <!--   HAUPTRAHMEN ENDE -->
 
 <!--   ZUSATZRAHMEN START -->
-
 <li class="halbTransparent border-left" data-row="3" data-col="2" data-sizex="7" data-sizey="4">
     <header class="headerTransparent">7-TAGE VORHERSAGE</header>
 	<div data-type="swiper"
@@ -1007,7 +1014,6 @@
         </ul>
     </div>
 </li>
-
 <!--   ZUSATZRAHMEN ENDE -->
 </ul>
 </div>
