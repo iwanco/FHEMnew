@@ -429,6 +429,20 @@
 <li class="halbTransparent border-left" data-row="3" data-col="2" data-sizex="7" data-sizey="1">
 	<header class="headerTransparent">HEIZUNG</header>
 	<div class="top">
+		<div class="inline left">
+		<div data-type="link"
+			 data-width="140"
+			 data-height="40"
+			 data-color="black"
+			 data-background-color="green"
+			 data-icon="fa-home"
+			 data-fhem-cmd="set TM.Centrale_Climate controlMode auto"
+			 class="round big">
+		</div>
+		<div data-type="label"
+			 class="">AUTO
+		</div>
+	</div>	
 		<div class="inline">
 			<div data-type="switch"
 				 data-device="TM.Centrale_Climate"
@@ -449,7 +463,7 @@
 			<div class="">15°C
 			</div>
 		</div>
-		<div class="inline left-space-2 right-space-2">
+		<div class="inline">
             <div data-type="spinner"
                  data-device="TM.Centrale_Climate"
 				 data-get="desired-temp"
@@ -492,20 +506,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="inline left">
-		<div data-type="link"
-			 data-width="140"
-			 data-height="40"
-			 data-color="black"
-			 data-background-color="green"
-			 data-icon="fa-home"
-			 data-fhem-cmd="set TM.Centrale_Climate controlMode auto"
-			 class="round big">
-		</div>
-		<div data-type="label"
-			 class="">AUTO
-		</div>
-	</div>	
 	<div class="inline right">
 		<div data-type="link"
 			 data-width="140" 
